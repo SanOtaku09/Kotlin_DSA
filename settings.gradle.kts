@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "data_structure_and_algo"
-include( "data_structur" , "algo" )
+include( "data_structure" , "algo" )
