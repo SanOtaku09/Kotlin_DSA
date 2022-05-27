@@ -3,7 +3,7 @@ object sort {
 
     fun < T : Comparable<T> > Array<T>.merge_sort() = merge_sort( this , 0 , this.size-1 )
 
-    private tailrec fun < T : Comparable<T> > merge_sort( array : Array<T> , l : Int , r : Int ) {
+    private fun < T : Comparable<T> > merge_sort( array : Array<T> , l : Int , r : Int ) {
         if ( r <= l ) return
         val m = l + ( r - l ) / 2
         merge_sort( array , l , m )
