@@ -4,6 +4,7 @@ object longestPalindromicSubstring {
 
     var longestPalidrome = ""
 
+    // normal recursive function
     fun String.longestPalidromeSubstringRecursize() : String = longestPalidromeSubstringRecursiveHelper( 0 , length-1 )
 
     private fun String.longestPalidromeSubstringRecursiveHelper( l : Int , r : Int ) : String {
@@ -17,6 +18,7 @@ object longestPalindromicSubstring {
         }
     }
 
+    //dynamic recursive function
     fun String.longestPalidromeSubstring() : String {
         longestPalidromeSubstringHelper( 0 , length-1 )
         return longestPalidrome
@@ -28,6 +30,7 @@ object longestPalindromicSubstring {
             substring( l , r+1 ).let{ newString ->
                 if ( newString.length > longestPalidrome.length ){
                     longestPalidrome = newString
+                    return
                 }
             }
         }
@@ -35,6 +38,7 @@ object longestPalindromicSubstring {
         longestPalidromeSubstringHelper( l , r-1 )
     }
 
+    // common function
     private fun String.isValid( l : Int , r : Int ) : Boolean {
         var low = l ; var high = r
         while ( low <= high ) {
