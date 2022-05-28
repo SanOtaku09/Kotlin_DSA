@@ -4,6 +4,7 @@ import org.junit.Assert
 import org.junit.Test
 import string.longestPalindromicSubstring.longestPalindromicSubstring.longestPalidromeSubstring
 import string.longestPalindromicSubstring.longestPalindromicSubstring.longestPalidromeSubstringRecursize
+import string.longestPalindromicSubstring.longestPalindromicSubstring.longestPalidromeSubstringWithLoop
 
 class longestPalindromicSubstringTest {
     @Test
@@ -14,5 +15,7 @@ class longestPalindromicSubstringTest {
         Assert.assertEquals( input2.longestPalidromeSubstring() , "hellolleh" )
         Assert.assertEquals( input.longestPalidromeSubstringRecursize() , "abcba" )
         Assert.assertEquals( input2.longestPalidromeSubstringRecursize() , "hellolleh" )
+        Assert.assertEquals( longestPalidromeSubstringWithLoop( input ) , "abcba" )
+        Assert.assertEquals( longestPalidromeSubstringWithLoop( input2 ) , "hellolleh" )
     }
 }
