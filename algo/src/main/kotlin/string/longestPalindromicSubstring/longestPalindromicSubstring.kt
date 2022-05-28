@@ -47,4 +47,35 @@ object longestPalindromicSubstring {
         return true
     }
 
+
+    // dynamic ans without recursion
+    var len = 0 ; var length = 0 ; var init = 0
+    fun String.longestPalidromeSubstringWithLoop() : String {
+        val array = this.toCharArray()
+        len = this.length
+        if ( len <= 1 ) return  this
+        var i = 0
+        while ( i < len ) {
+            i = manacher( array , i )
+            i++
+        }
+        return this.substring( init , init + length )
+    }
+
+    fun manacher( array : CharArray , k : Int ) : Int {
+        var i = k - 1 ; var j = k
+        while ( j < len - 1 && array[j] == array[j+1] ) j++
+        var netcentre = j++
+        while ( i >= 0 && j < len && array[i] == array[j] ) {
+            i--
+            j++
+        }
+        if ( j - i - 1 > length ) {
+            length = j - i - 1
+            init = i +1
+        }
+        return netcentre
+    }
+
+
 }
