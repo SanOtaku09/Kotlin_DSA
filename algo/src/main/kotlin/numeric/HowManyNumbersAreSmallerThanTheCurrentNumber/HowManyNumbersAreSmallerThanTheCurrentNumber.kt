@@ -1,4 +1,4 @@
-package string.HowManyNumbersAreSmallerThanTheCurrentNumber
+package numeric.HowManyNumbersAreSmallerThanTheCurrentNumber
 
 object HowManyNumbersAreSmallerThanTheCurrentNumber {
     fun smallerNumbersThanCurrent(nums: IntArray): IntArray {

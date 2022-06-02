@@ -1,8 +1,8 @@
-package string.HowManyNumbersAreSmallerThanTheCurrentNumber
+package numeric.HowManyNumbersAreSmallerThanTheCurrentNumber
 
 import org.junit.Assert
 import org.junit.Test
-import string.HowManyNumbersAreSmallerThanTheCurrentNumber.HowManyNumbersAreSmallerThanTheCurrentNumber.smallerNumbersThanCurrent
+import numeric.HowManyNumbersAreSmallerThanTheCurrentNumber.HowManyNumbersAreSmallerThanTheCurrentNumber.smallerNumbersThanCurrent
 
 class HowManyNumbersAreSmallerThanTheCurrentNumberTest {
     @Test
