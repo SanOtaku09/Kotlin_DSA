@@ -1,6 +1,6 @@
 package tree.common.bst
-data class TreeNode<T>(
-    var `val` : T ,
-    var left : TreeNode<T>? = null ,
-    var right : TreeNode<T>? = null
+data class TreeNode(
+    var `val` : Int ,
+    var left : TreeNode? = null ,
+    var right : TreeNode? = null
 )
